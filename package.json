@@ -1,0 +1,19 @@
+{
+  "name": "term-log-reducer",
+  "version": "1.0.0",
+  "description": "本地终端输出回车覆盖与 ANSI 文本还原后端（API + CLI）",
+  "type": "module",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "npm run build && node --test \"dist/tests/*.test.js\"",
+    "start": "node dist/src/server.js",
+    "cli": "node dist/src/cli.js",
+    "demo": "node dist/src/demo.js"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "*",
+    "typescript": "*"
+  }
+}
+
