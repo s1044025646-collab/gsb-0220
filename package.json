@@ -1,0 +1,21 @@
+{
+  "name": "terminal-output-restorer",
+  "version": "1.0.0",
+  "description": "本地终端输出回车覆盖与 ANSI 文本还原后端（API + CLI）",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "npm run build && node --experimental-sqlite --experimental-strip-types --test --test-reporter=spec test/*.test.ts",
+    "start": "node --experimental-sqlite dist/src/cli/server.js serve",
+    "cli": "node --experimental-sqlite dist/src/cli/index.js",
+    "demo": "npm run build && node --experimental-sqlite scripts/demo.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "typescript": "^5.7.0"
+  }
+}
